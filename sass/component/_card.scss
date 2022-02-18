@@ -1,0 +1,11 @@
+.promo-info {
+    background-color: $color-grey-1;
+    border-radius: .5rem;
+}
+.text__extra { 
+    color: #000;
+    &:not(:last-child){
+        margin-right: 1.3rem;
+        padding-right: 2rem;
+    }
+}

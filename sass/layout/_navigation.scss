@@ -1,0 +1,109 @@
+.nav {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
+    border-bottom: .1rem solid $color-grey;
+    // &__try { 
+    //     color: red;
+    //     font-size: 3rem;
+    //     z-index: 100;
+    // }
+    // .opt + .nav__options &__try {
+    //     background-color: greenyellow !important;
+    // }
+    &__logo-container { width: 100%;}
+    &__img {
+        width: 100%;
+        height: calc( 10vh - 1.5rem);
+    }
+    &__options, &__navigation,  &__options-alt {
+        display: flex;
+        align-items: center;
+    }
+    &__navigation {
+        list-style: none;
+        padding: 1.3rem;
+        height: 10vh;
+    }
+    &__navigation {
+        @media screen and (max-width: 775px) {
+            position: fixed;
+            top: 0rem;
+            left: 0;
+            background-color: #fff !important;
+            height: 100vh;
+            width: 80vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            transition: transform .3s;
+
+        }
+    }
+    @media screen and (max-width: 775px) {
+        &__item {
+            height: auto !important;
+        }
+        &__item:not(:last-child) {
+            margin-top: 3rem;
+        }
+        &__link {
+            color: #000 !important;
+        }
+    }
+    &__options {
+        @media screen and (max-width: 775px) {
+        position: relative;
+        label {
+            color: #000;
+            font-size: 1.7rem;
+            background-color: #000;
+            color: #fff;
+            padding: .8rem;
+            border-radius: .3rem;
+            z-index: 99;
+            position: absolute;
+        }
+        & input[type="checkbox"] ~ .nav__navigation{
+            transform: translateX(-100%);
+        }
+        & input[type="checkbox"]:checked ~ .nav__navigation{
+            transform: translateX(0);
+        }
+        & input[type="checkbox"]:not(:checked) + label {
+            background-color: #fff;
+            color: #000;
+            right: 11rem;
+        }
+    }
+    }
+    &__item {
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        height: inherit;
+        border-bottom: .3rem solid transparent;
+        transition: all .3s;
+    }
+    &__item:hover{
+        border-bottom: .3rem solid #fff;
+    }
+    &__link, &__lang {
+        text-decoration: none;
+        font-size: 1.6rem;
+        color: $color-white-1;
+    }
+    &__lang {        
+        padding-left: 1.4rem;
+        border-left: .1rem solid $color-grey;
+        height: 2rem;
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+    }
+}

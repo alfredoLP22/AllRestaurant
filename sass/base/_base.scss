@@ -1,0 +1,30 @@
+$font-primary: 'Roboto', sans-serif;
+$color-white-1: #fff;
+$color-grey-1: #eaedf5;
+$color-grey: #3e3d48;
+$font-sizes-ex-bg: 5rem;
+$font-sizes-bg: 4rem;
+$font-sizes-lg: 2.2rem;
+$font-sizes-md: 1.6rem;
+$font-sizes-sm: 1.2rem;
+$font-sizes-ex-sm: .8rem;
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body {
+    font-family: $font-primary;
+    font-weight: 300;
+    overflow-x: hidden;
+    width: 100vw;
+}
+input[type="checkbox"] { 
+    display: none;
+}

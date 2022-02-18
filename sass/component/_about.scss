@@ -1,0 +1,53 @@
+.about {
+    &__section {
+        display: flex;
+        width: 80vw;
+        margin: 5rem auto;
+        justify-content: space-between;
+        align-items: flex-start;
+        font-size: 4rem;
+    }
+    &__options {
+        width: inherit;
+    }
+    &__menu{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 1.5rem 0;
+        border-top: .2rem solid $color-grey-1;
+        &-lab, &-lab-2 {
+            cursor: pointer;
+        }
+        &:last-child {
+            border-bottom: .2rem solid $color-grey-1;
+        }
+        &:hover  &-lab{
+            color: #0F5FBC;
+            text-decoration: underline;
+        }
+        &:hover &-lab-2{
+            color: #0F5FBC;
+        }
+        & input[type="checkbox"] { 
+            display: none;
+        }
+
+        & input[type="checkbox"] ~ .collapsip-container{ 
+            height: 0;
+            transform: scaleY(0);
+            display: none;
+        }
+        & input[type="checkbox"]:checked ~ .collapsip-container{
+            height: 100%;
+            transform-origin: top;
+            transition: transform .2s ease-out;
+            transform: scaleY(1); 
+            display: block;
+        }
+    }
+}
+.collapsip-container {
+    font-size: 1.4rem;
+}

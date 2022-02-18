@@ -1,0 +1,92 @@
+.heading {
+    &--1 {
+        font-size: #{$font-sizes-ex-bg};
+        @media screen and (max-width: 775px) {
+            font-size: 2.5rem;
+        }
+    }
+    &--2{
+        font-size: #{$font-sizes-lg};
+        @media screen and (max-width: 775px) {
+            font-size: 1.5rem;
+        }
+    }
+    &--3{
+        font-size: #{$font-sizes-md};
+    }
+}
+
+.m-auto { margin: 0 auto;}
+.m-auto-y { margin: auto 0;}
+@for $i from 1 through 10 {
+    .mt-#{$i} {
+        margin-top: $i * 1.3rem;
+    }
+    .mr-#{$i} {
+        margin-top: $i * 1.3rem;
+    }
+    .p-#{$i} {
+        padding: 0 $i * 1.3rem;
+    }
+    .pt-#{$i} {
+        padding-top: $i * 1.3rem;
+    }
+    .pb-#{$i} {
+        padding-bottom: $i * 1.3rem;
+    }
+    .pr-#{$i} {
+        padding-right: $i * 1.3rem;
+    }
+    .pl-#{$i} {
+        padding-left: $i * 1.3rem;
+    }
+    .w-#{$i*10} {
+        width: $i * 10%;
+    }
+    .h-#{$i*10} {
+        height: $i * 10%;
+    }
+}
+.d-flex { display: flex;}
+.row-rev { flex-direction: row-reverse; }
+.flex-column { flex-direction: column;}
+.just-cont-c { justify-content: center;}
+.just-cont-sb { justify-content: space-between;}
+.alig-items-st { align-items: flex-start; }
+.alig-items-c { align-items: center; }
+.line-h-md { line-height: 2rem;}
+.border-sm { border-radius: .5rem;}
+
+@media screen and (max-width: 775px) {
+    .d-mb-fc { 
+        display: flex;
+        flex-direction: column-reverse !important;
+    }
+    .d-mb-fc-nr { 
+        display: flex;
+        flex-direction: column !important;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+    .text-mb {
+        font-size: 1.5rem;
+    }
+    .text-al-c {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+    .text-al-c-mb {
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .w-mb-100{
+        width: 100% !important;
+    }
+    .w-mb-80{
+        width: 80% !important;
+    } 
+    .p-none { 
+        padding: 0 !important;
+    }
+}
